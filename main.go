@@ -49,6 +49,7 @@ func run(c *cli.Context) error {
 
 func main() {
 	app := cli.NewApp()
+	app.Name = "fetch_genome"
 	app.Action = run
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
