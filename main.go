@@ -29,7 +29,7 @@ func run(c *cli.Context) error {
 		return fmt.Errorf("Experiment %q not valid. Expected one of %s", experiment, experiments)
 	}
 
-	dir, err := ioutil.TempDir("", fmt.Sprintf("genome-%s-level_%s", experiment, level))
+	dir, err := ioutil.TempDir("", fmt.Sprintf("genome-%s-level_%s_", experiment, level))
 	if err != nil {
 		return err
 	}
